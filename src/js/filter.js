@@ -1,17 +1,18 @@
 const searchFormEl = document.querySelector(".search");
+
 searchFormEl.search.addEventListener("input", () => {
   const searchValue = searchFormEl.search.value.toLowerCase();
-  const cardsItem = document.querySelectorAll(".cards__item");
-  const cardsTitles = document.querySelectorAll(".cards__title");
-  cardsTitles.forEach((title, i) => {
-    if (title.textContent.toLowerCase().includes(searchValue)) {
-      cardsItem[i].style.display = "block";
-    } else {
-      cardsItem[i].style.display = "none";
+  const cardsItim = document.querySelectorAll(".cards__item");
+  const cardsTitle = document.querySelectorAll(".cards__title");
+  cardsTitle.forEach((title, i) => {
+    if (title.textContent.toLocaleLowerCase().includes(searchValue)) {
+      cardsItim[i].style.display='block';
+    }else{
+      cardsItim[i].style.display='none';
+
     }
   });
 });
-
 
 // Filter region start
 
